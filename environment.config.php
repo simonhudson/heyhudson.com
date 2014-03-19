@@ -10,7 +10,7 @@ date_default_timezone_set('Europe/London');
 $siteTitle = 'Simon Hudson - Web design &amp; development';
 
 //Site paths
-$siteRoot = '/heyhudson/';
+$siteRoot = '/';
 $sitePath = array (
 'root' => $siteRoot,
 'css' => $siteRoot.'css/',
@@ -28,6 +28,6 @@ $currentPage = substr($_SERVER['REQUEST_URI'],0);
 //echo $currentPage.'<br />';
 
 //Current portfolio item
-$currentItem = substr($_SERVER['REQUEST_URI'],21);
+$currentItem = substr($_SERVER['REQUEST_URI'],11);
 // echo $currentItem;
 ?>
