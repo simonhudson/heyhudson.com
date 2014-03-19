@@ -1,0 +1,40 @@
+/*
+Mixins
+---------------*/
+@mixin hidden {
+  font-size:0 !important;
+  height:0 !important;
+  left:-999% !important;
+  line-height:0 !important;
+  overflow:hidden !important;
+  position:absolute !important;
+  width:0 !important;
+}
+@mixin visible {
+  font-size:1.2em !important;
+  height:100% !important;
+  left:auto !important;
+  line-height:1.4em !important;
+  overflow:visible !important;
+  position:static !important;
+  width:auto !important;
+}
+@mixin borderRadius($tl, $tr, $br, $bl) {
+  border-radius:#{$tl $tr $br $bl};
+}
+@mixin boxShadow($x, $y, $spread, $color) {
+  box-shadow:#{$x} #{$y} #{$spread} #{$color};
+}
+@mixin animate($property, $speed) {
+  -moz-transition:#{$property} #{$speed} linear;
+  -o-transition:#{$property} #{$speed} linear;
+  -webkit-transition:#{$property} #{$speed} linear;
+  transition:#{$property} #{$speed} linear;
+}
+@mixin sprite {
+  background-color:transparent;
+  background-image:url(../imgs/sprite.png);
+  background-position:0 0;
+  background-repeat:no-repeat;
+  display:inline-block;
+}

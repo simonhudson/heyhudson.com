@@ -1,0 +1,102 @@
+/*
+Layout
+---------------*/
+header {
+	border-bottom:1px solid $bodyTextColor;
+	font-family:arial, sans-serif;
+	font-size:.8em;
+	margin-bottom:2px;
+	padding:40px 0 20px 0;
+	position:relative;
+	text-transform:lowercase;
+	&:before {
+		border-bottom:2px solid $bodyTextColor;
+		bottom:-5px;
+		content:'';
+		left:0;
+		position:absolute;
+		right:0;
+		top:0;
+		z-index:-1;
+	}
+	.roundel {
+		@include animate(background-color, .3s);
+		@include borderRadius(30px, 30px, 30px, 30px);
+		@include sprite;
+		background-color:$bodyTextColor;
+		height:60px;
+		width:60px;
+	}
+	a {
+		border-bottom:0;
+		color:$bodyTextColor;
+		font-weight:normal;
+	}
+	a:hover,
+	a:focus {
+		border-bottom:0;
+		.roundel {
+			background-color:$accentPrimary100;
+		}
+	}
+	.name,
+	.tagline,
+	.divider {
+		display:inline-block;
+		vertical-align:25px;
+	}
+	.name,
+	.divider {
+		font-weight:bold;
+	}
+	.divider {
+		color:$accentPrimary100;
+	}
+}
+.main-content {
+	float:left;
+	padding-top:60px;
+}
+.item-grab {
+	margin-bottom:60px;
+	img {
+		display:block;
+		height:220px;
+		width:100%;
+	}
+}
+.item-content-wrap {
+	float:left;
+}
+.item-meta-wrap {
+	float:right;
+}
+.item-meta {
+	border-left:1px dotted #bbb;
+	margin-bottom:20px;
+	padding:0 0 0 30px;
+}
+footer {
+	clear:both;
+}
+.band {
+	@include boxShadow(0, 0, 5px, $bodyTextColor);
+	background:#eee;
+	float:left;
+	padding:40px 0;
+	width:100%;
+}
+.about {
+	img {
+		@include borderRadius(75px, 75px, 75px, 75px);
+		@include boxShadow(0, 0, 5px, $bodyTextColor);
+		float:left;
+		margin-right:1em;
+	}
+	p {
+		overflow:auto;
+	}
+}
+.social-links {
+	margin-left:140px;
+}

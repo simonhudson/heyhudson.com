@@ -1,0 +1,20 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+### This file goes in the root of the site. E.G if the site is .com/somedir the file goes in 'somedir' ###
+
+#Strip .php#
+#RewriteRule ^([A-Za-z0-9-]+)/?$ $1.php [NC]
+
+RewriteRule about about.php [NC]
+#RewriteRule accessibility accessibility.php [NC]
+
+#Redirect /portfolio to index#
+RewriteRule ^portfolio/?$ / [NC]
+
+#Project detail pages#
+RewriteRule ^portfolio/([A-Za-z0-9-]+)/?$ detail.php?item=$1 [NC]
+
+#Error pages#
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
