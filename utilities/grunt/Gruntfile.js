@@ -9,13 +9,23 @@ module.exports = function(grunt) {
         concatenationSeparator = ';'
     ;
 
-    // 1. All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        clean: [
-            jsDir + productionFileName,
-            jsDir + productionMinifiedFileName
-        ],
+        
+        // Delete existing generated files
+        clean: {
+            dist: {
+                src: [
+                    jsDir + productionFileName,
+                    jsDir + productionMinifiedFileName
+                ]
+            },
+            options: {
+                force: true
+            }
+        },
+
+        // Concatenate all JS files
         concat: {
             options: {
                 separator: concatenationSeparator,
@@ -27,12 +37,16 @@ module.exports = function(grunt) {
                 dest: jsDir + productionFileName,
             },
         },
+
+        // Create minified file from concatenated file
         uglify: {
             build: {
                 src: jsDir + productionFileName,
                 dest: jsDir + productionMinifiedFileName
             }
         },
+
+        // Run tasks on update to any file in JS dir
         watch: {
             scripts: {
                 files: [jsDir + wildcardJsSelection],
