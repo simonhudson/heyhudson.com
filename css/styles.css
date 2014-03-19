@@ -216,16 +216,14 @@ footer {
   padding: 40px 0;
   width: 100%; }
 
-.about img {
+.self-pic {
   border-radius: 75px 75px 75px 75px;
   box-shadow: 0 0 5px #4a4a4a;
   float: left;
   margin-right: 1em; }
+
 .about p {
   overflow: auto; }
-
-.social-links {
-  margin-left: 140px; }
 
 /*
 Typography
@@ -289,7 +287,8 @@ h2 {
 
 .band p, .band li {
   font-family: arial, helvetica, verdana, sans-serif;
-  font-size: .9em; }
+  font-size: .9em;
+  line-height: 1.7em; }
 
 .skills-wrap li {
   display: inline; }
@@ -450,8 +449,12 @@ Media queries
   .col.span-12 {
     width: 100%; }
 
+  .band {
+    padding: 0; }
+
   .main-content,
-  .about {
+  .about,
+  .self-pic-wrap {
     padding: 20px; }
 
   .item-grab {
@@ -480,7 +483,16 @@ Media queries
       .item-meta li:after {
         content: ', '; }
       .item-meta li:last-of-type:after {
-        content: ''; } }
+        content: ''; }
+
+  .about h2 {
+    text-align: center; }
+
+  .self-pic-wrap {
+    padding: 20px 0;
+    text-align: center; }
+    .self-pic-wrap img {
+      float: none; } }
 /* < 720px (mobiles etc) */
 @media only screen and (max-width: 720px) {
   .wrap {
@@ -535,9 +547,6 @@ Media queries
     height: auto;
     margin-bottom: 20px;
     width: 100%; }
-
-  .social-links {
-    margin: 0; }
 
   .about li {
     display: block; } }

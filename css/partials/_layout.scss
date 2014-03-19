@@ -86,17 +86,14 @@ footer {
 	padding:40px 0;
 	width:100%;
 }
+.self-pic {
+	@include borderRadius(75px, 75px, 75px, 75px);
+	@include boxShadow(0, 0, 5px, $bodyTextColor);
+	float:left;
+	margin-right:1em;
+}
 .about {
-	img {
-		@include borderRadius(75px, 75px, 75px, 75px);
-		@include boxShadow(0, 0, 5px, $bodyTextColor);
-		float:left;
-		margin-right:1em;
-	}
 	p {
 		overflow:auto;
 	}
-}
-.social-links {
-	margin-left:140px;
 }

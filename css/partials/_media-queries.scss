@@ -50,8 +50,12 @@ Media queries
 	.col.span-12 {
 		width:100%;
 	}
+	.band {
+		padding:0;
+	}
 	.main-content,
-	.about {
+	.about,
+	.self-pic-wrap {
 		padding:20px;
 	}
 	.item-grab {
@@ -86,6 +90,18 @@ Media queries
 			&:last-of-type:after {
 				content:'';
 			}
+		}
+	}
+	.about {
+		h2 {
+			text-align:center;
+		}
+	}
+	.self-pic-wrap {
+		padding:20px 0;
+		text-align:center;
+		img {
+			float:none;
 		}
 	}
 }
@@ -152,9 +168,6 @@ Media queries
 		height:auto;
 		margin-bottom:20px;
 		width:100%;
-	}
-	.social-links {
-		margin:0;
 	}
 	.about {
 		li {

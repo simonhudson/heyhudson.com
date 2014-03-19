@@ -2,9 +2,11 @@
 </div><!--/wrap-->
 <div class="band">
 	<div class="wrap">
-		<div class="col span-9 about-wrap">
+        <div class="col span-2 self-pic-wrap">
+            <img alt="Simon Hudson" class="self-pic" src="<?php echo $sitePath['imgs']; ?>self.png" />
+        </div>
+		<div class="col span-7 about-wrap">
 			<section class="about">
-                <img alt="Simon Hudson" src="<?php echo $sitePath['imgs']; ?>self.png" />
 				<h2>Hi there, my name's Simon and I build websites.</h2>
                 <p>I am an experienced web designer/front-end developer who specialises in writing lean, standards-compliant <abbr title="eXtensible Hypertext Markup Language">(X)HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript to create accessible and usable websites. I have a strong understanding of <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> and <abbr title="Web Accessibility Initiative">WAI</abbr> requirements, W3C standards, browser quirks and progressive enhancement/graceful degradation, as well as experience developing for assistive technologies.</p>
                 <nav class="social-links">
