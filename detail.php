@@ -12,7 +12,7 @@ foreach ($portfolioItems as $portfolioItem) {
 		</div>
 		<div class="col span-2 item-meta-wrap">
 			<section class="item-meta">
-				<p class="item-url"><a<?php if ($openExternalLinksNewWindow) { ?> class="ext-link" target="_blank"<?php } ?> href="http://<?php echo $portfolioItem['url']; ?>" rel="tooltip" title="Visit <?php echo $portfolioItem['title']; ?>"><?php echo $portfolioItem['url']; ?><?php if ($openExternalLinksNewWindow) { ?><span class="hidden"> (opens in a new window)</span><?php } ?></a></p>
+				<p class="item-url"><a<?php if ($openExternalLinksNewWindow) { ?> class="ext-link" target="_blank"<?php } ?> href="http://<?php echo $portfolioItem['url']; ?>" title="Visit <?php echo $portfolioItem['title']; ?>"><?php echo $portfolioItem['url']; ?><?php if ($openExternalLinksNewWindow) { ?><span class="hidden"> (opens in a new window)</span><?php } ?></a></p>
 				<ul>
 		            <?php echo $portfolioItem['madewith']; ?>
 		        </ul>
