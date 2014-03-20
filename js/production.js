@@ -42,7 +42,8 @@ $('.item-teaser').each(function() {
 	
 	var
 		$tooltipLink = $(this),
-		tooltipContent = $tooltipLink.attr('title'),
+		tooltipContentAttr = 'data-title',
+		tooltipContent = $tooltipLink.attr(tooltipContentAttr),
 		$tooltipElement = 
 			$('<div class="tooltip-wrap">' +
 				'<div class="inner">' +
@@ -53,7 +54,7 @@ $('.item-teaser').each(function() {
 	;
 
 	function createTooltip() {
-		$tooltipLink.removeAttr('title');
+		$tooltipLink.removeAttr(tooltipContentAttr);
 		$('body').append($tooltipElement);
 		fadeInTooltip();
 	}

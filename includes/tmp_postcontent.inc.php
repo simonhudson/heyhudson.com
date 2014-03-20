@@ -20,7 +20,7 @@
     <footer role="footer">
     </footer><!--/footer-->
 </div><!--/band-->
-<!--<script src="<?php echo $sitePath['libs']; ?>jquery-1.11.0.min.js"></script>
-<script src="<?php echo $sitePath['js']; ?>production<?php if ($serveMinifiedAssets) { ?>.min<?php } ?>.js"></script>-->
+<script src="<?php echo $sitePath['libs']; ?>jquery-1.11.0.min.js"></script>
+<script src="<?php echo $sitePath['js']; ?>production<?php if ($serveMinifiedAssets) { ?>.min<?php } ?>.js"></script>
 </body>
 </html>

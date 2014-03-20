@@ -2,7 +2,8 @@ function tooltip() {
 	
 	var
 		$tooltipLink = $(this),
-		tooltipContent = $tooltipLink.attr('title'),
+		tooltipContentAttr = 'data-title',
+		tooltipContent = $tooltipLink.attr(tooltipContentAttr),
 		$tooltipElement = 
 			$('<div class="tooltip-wrap">' +
 				'<div class="inner">' +
@@ -13,7 +14,7 @@ function tooltip() {
 	;
 
 	function createTooltip() {
-		$tooltipLink.removeAttr('title');
+		$tooltipLink.removeAttr(tooltipContentAttr);
 		$('body').append($tooltipElement);
 		fadeInTooltip();
 	}
