@@ -16,48 +16,6 @@
                 </nav>
             </section>
 		</div>
-		<!-- <div class="col span-9 skills-wrap">
-			<section class="skills">
-				<h2 class="hidden">Skills</h2>
-                <h3>Languages</h3>
-                <ul>
-                    <li><abbr title="(Extensible) Hypertext Markup Language">(X)HTML</abbr></li>
-                    <li><abbr title="Cascading Style Sheets">CSS</abbr></li>
-                    <li>JavaScript &amp; jQuery</li>
-                    <li><abbr title="PHP: Hypertext Pre-processor">PHP</abbr> (with a little MySQL)</li>
-                </ul>
-                <h3>Tools</h3>
-                <ul>
-                    <li><abbr title="Syntactically Awesome Style Sheets">SASS</abbr></li>
-                    <li>Grunt</li>
-                    <li>jQuery UI</li>
-                    <li>Kendo UI</li>
-                    <li>Apache Velocity Templates</li>
-                    <li>WordPress</li>
-                    <li>Git</li>
-                    <li>Subversion</li>
-                    <li>Team Foundation Server</li>
-                </ul>       
-                <h3>Software</h3>
-                <ul>
-                    <li>Dreamweaver</li>
-                    <li>Visual Studio</li>
-                    <li>Photoshop</li>
-                    <li>Illustrator</li>
-                    <li>Flash</li>
-                    <li>InDesign</li>
-                </ul>
-                <h3>Experience of</h3>
-                <ul>
-                    <li>.NET</li>
-                    <li>Sharepoint</li>
-                    <li>Java</li>
-                    <li>Mac &amp; Windows OS</li>
-                    <li>Kanban/Agile methodologies</li>
-                    <li>Print design</li>
-                </ul>
-			</section>
-		</div> -->
 	</div><!--/wrap-->
     <footer role="footer">
     </footer><!--/footer-->

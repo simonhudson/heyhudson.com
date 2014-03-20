@@ -34,13 +34,6 @@ include('includes/portfolio-items.inc.php');
 					<span class="name">Simon Hudson</span> <span class="divider">/</span> <span class="tagline">web design &amp; development</span>
 				</a>
 			</div><!--/logo-->
-	<!-- 		<nav role="navigation">
-				<ul class="main-nav" id="main-nav">
-					<li><a <?php if ($currentPage === $sitePath['root'] || $currentPage === $sitePath['root'].'index.php') { ?> class="current" <?php } ?>href="<?php echo $sitePath['root']; ?>">Portfolio</a></li>
-					<li><a <?php if ($currentPage === $sitePath['root'].'about') { ?> class="current" <?php } ?>href="<?php echo $sitePath['root']; ?>about">About me</a></li>
-					<li><a class="github" href="http://github.com/simonhudson">Github</a></li>
-				</ul>
-			</nav> -->
 		</header><!--/header-->
 	</div>
 	<div class="main-content" id="main-content">
