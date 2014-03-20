@@ -12,12 +12,14 @@ include('includes/portfolio-items.inc.php');
 <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="access-links">
+<?php if ($enableAccessLinks) { ?>
+<nav id="access-links">
 	<ul>
 		<li><a href="#main-content">Skip to main content</a></li>
 		<li><a href="#main-nav">Skip to main navigation</a></li>
 	</ul>
-</div>
+</nav>
+<?php } ?>
 <noscript>
 	<div class="feedback-msg warning no-js">
 		<span class="sprite"></span>
