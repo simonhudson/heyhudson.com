@@ -1,7 +1,7 @@
 <?php
 
-//Set environment. If === 'production', minified assets will be served
-$environment = 'development';
+// Serve minified assets
+$serveMinifiedAssets = false;
 
 //Set timezone for date() function
 date_default_timezone_set('Europe/London');
