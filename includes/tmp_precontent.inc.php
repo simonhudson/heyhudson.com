@@ -1,6 +1,13 @@
 <?php
 include('environment.config.php');
 include('includes/portfolio-items.inc.php');
+
+//File size for CV PDF
+function formatBytes($size) {
+	$units = array(' B', ' KB', ' MB', ' GB', ' TB');
+	for ($i = 0; $size >= 1024 && $i < 4; $i++) $size /= 1024;
+	return round($size, 0).$units[$i];
+}
 ?>
 <!DOCTYPE html>
 <html>

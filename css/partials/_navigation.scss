@@ -46,6 +46,9 @@ a {
 		display:inline-block;
 		vertical-align:middle;
 	}
+	.file-size {
+		font-size:.6em;
+	}
 	.icon {
 		@include animate(background-color, .3s);
 		@include borderRadius(25px, 25px, 25px, 25px);

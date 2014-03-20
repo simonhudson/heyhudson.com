@@ -57,6 +57,18 @@ header {
 	float:left;
 	padding-top:60px;
 }
+.item-teaser {
+	@include animate(box-shadow, .3s);
+	@include boxShadow(0, 0, 5px, transparent);
+	border:5px solid #eee;
+	cursor:pointer;
+	margin-bottom:20px;
+	position:relative;
+	&:hover,
+	&:focus {
+		@include boxShadow(0, 0, 5px, $bodyTextColor);
+	}
+}
 .item-grab {
 	margin-bottom:60px;
 	img {
