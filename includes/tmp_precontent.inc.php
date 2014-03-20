@@ -1,5 +1,6 @@
 <?php
 include('environment.config.php');
+include('config.inc.php');
 include('includes/portfolio-items.inc.php');
 
 //File size for CV PDF
@@ -26,6 +27,7 @@ function formatBytes($size) {
 	</ul>
 </nav>
 <?php } ?>
+<?php if ($enableNoScriptWarning) { ?>
 <noscript>
 	<div class="feedback-msg warning no-js">
 		<span class="sprite"></span>
@@ -33,6 +35,7 @@ function formatBytes($size) {
 		<p>This software requires your browser to have JavaScript enabled.</p>
 	</div>
 </noscript>
+<?php } ?>
 <div class="wrap" id="main-wrap">
 	<div class="col span-9">
 		<header class="header" role="banner">

@@ -6,9 +6,6 @@ $environment = 'development';
 //Set timezone for date() function
 date_default_timezone_set('Europe/London');
 
-//Site title
-$siteTitle = 'Simon Hudson - Web design &amp; development';
-
 //Site paths
 $siteRoot = '/heyhudson/';
 $sitePath = array (
@@ -19,12 +16,6 @@ $sitePath = array (
 'libs' => $siteRoot.'libs/',
 'tests' => $siteRoot.'tests/'
 );
-
-//Open external links in new winow?
-$openExternalLinksNewWindow = false;
-
-// Enable access links
-$enableAccessLinks = false;
 
 //Current page
 $currentPage = substr($_SERVER['REQUEST_URI'],0);
