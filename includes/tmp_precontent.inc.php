@@ -17,6 +17,7 @@ function formatBytes($size) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title><?php echo $siteTitle; ?></title>
 <link href="<?php echo $sitePath['css']; ?>styles<?php if ($environment !== 'development') { ?>.min<?php } ?>.css" media="all" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
 </head>
 <body>
 <?php if ($enableAccessLinks) { ?>
