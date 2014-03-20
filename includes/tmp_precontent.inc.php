@@ -1,5 +1,5 @@
 <?php
-include('environment.config.php');
+include('environment.config.inc.php');
 include('config.inc.php');
 include('includes/portfolio-items.inc.php');
 
