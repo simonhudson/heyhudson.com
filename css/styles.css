@@ -180,7 +180,8 @@ header {
 
 .main-content {
   float: left;
-  padding-top: 60px; }
+  padding-top: 60px;
+  position: relative; }
 
 .item-teaser {
   -moz-transition: box-shadow 0.3s linear;
@@ -503,6 +504,10 @@ Media queries
     .item-grab img {
       height: auto;
       width: 100%; }
+
+  .col.item-teaser-wrap {
+    float: left;
+    width: auto; }
 
   .item-meta-wrap,
   .item-content-wrap {
