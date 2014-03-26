@@ -1,6 +1,11 @@
 /*
 Layout
 ---------------*/
+
+$itemTeaserBorderWidth:5px;
+$itemTeaserHeight: 140px;
+$itemTeaserWidth: 220px;
+
 header {
 	border-bottom:1px solid $bodyTextColor;
 	font-family:arial, sans-serif;
@@ -55,20 +60,8 @@ header {
 }
 .main-content {
 	float:left;
-	padding-top:60px;
+	padding:60px 0;
 	position:relative;
-}
-.item-teaser {
-	@include animate(box-shadow, .3s);
-	@include boxShadow(0, 0, 5px, $bodyTextColor);
-	border:5px solid #fff;
-	cursor:pointer;
-	margin-bottom:20px;
-	position:relative;
-	&:hover,
-	&:focus {
-		@include boxShadow(0, 0, 5px, $bodyTextColor);
-	}
 }
 .item-grab {
 	@include boxShadow(0, 0, 5px, $bodyTextColor);
@@ -76,7 +69,7 @@ header {
 	margin-bottom:60px;
 	img {
 		display:block;
-		height:220px;
+		height:$itemTeaserWidth;
 		width:100%;
 	}
 }
@@ -111,4 +104,52 @@ footer {
 	p {
 		overflow:auto;
 	}
+}
+
+/* Item teaser UI */
+.item-teaser {
+	margin-bottom:20px;
+	position:relative;
+	a {
+		@include animate(box-shadow, .3s);
+		@include boxShadow(0, 0, 5px, $bodyTextColor);
+		border:5px solid #fff;
+		height:$itemTeaserHeight;
+		width:$itemTeaserWidth;
+		&:hover,
+		&:focus {
+			.item-teaser-title {
+				opacity:1;
+			}
+			img {
+				margin-top:$itemTeaserBorderWidth;
+			}
+		}
+	}
+	.front,
+	.back {
+		background:#fff;
+		height:$itemTeaserHeight;
+		padding-top:5px;
+		width:$itemTeaserWidth;
+	}
+}
+.item-teaser-title {
+	@include animate(opacity, .3s);
+	background:#535353;
+	background:-moz-radial-gradient(center, ellipse cover,  #535353 0%, #000000 100%);
+	background:-webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#535353), color-stop(100%,#000000));
+	background:-webkit-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+	background:-o-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+	background:-ms-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+	background:radial-gradient(ellipse at center,  #535353 0%,#000000 100%);
+	font-size:1em;
+	height:($itemTeaserHeight - ($itemTeaserBorderWidth * 2));
+	left:$itemTeaserBorderWidth;
+	opacity:0;
+	padding:10px;
+	position:absolute;
+	top:$itemTeaserBorderWidth;
+	vertical-align:middle;
+	width:($itemTeaserWidth - ($itemTeaserBorderWidth * 2));
 }

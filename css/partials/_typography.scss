@@ -34,7 +34,7 @@ h2 {
 			}
 		}
 	}
-	.item-teaser-title {
+	/*.item-teaser-title {
 		@include animate(opacity, .3s);
 		background:#535353;
 		background:-moz-radial-gradient(center, ellipse cover,  #535353 0%, #000000 100%);
@@ -53,7 +53,7 @@ h2 {
 		vertical-align:middle;
 		width:200px;
 	}
-	/*
+	
 	&.js-on {
 		h2 {
 			background:#535353;

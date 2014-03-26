@@ -181,21 +181,8 @@ header {
 
 .main-content {
   float: left;
-  padding-top: 60px;
+  padding: 60px 0;
   position: relative; }
-
-.item-teaser {
-  -moz-transition: box-shadow 0.3s linear;
-  -o-transition: box-shadow 0.3s linear;
-  -webkit-transition: box-shadow 0.3s linear;
-  transition: box-shadow 0.3s linear;
-  box-shadow: 0 0 5px #4a4a4a;
-  border: 5px solid #fff;
-  cursor: pointer;
-  margin-bottom: 20px;
-  position: relative; }
-  .item-teaser:hover, .item-teaser:focus {
-    box-shadow: 0 0 5px #4a4a4a; }
 
 .item-grab {
   box-shadow: 0 0 5px #4a4a4a;
@@ -236,6 +223,52 @@ footer {
 .about p {
   overflow: auto; }
 
+/* Item teaser UI */
+.item-teaser {
+  margin-bottom: 20px;
+  position: relative; }
+  .item-teaser a {
+    -moz-transition: box-shadow 0.3s linear;
+    -o-transition: box-shadow 0.3s linear;
+    -webkit-transition: box-shadow 0.3s linear;
+    transition: box-shadow 0.3s linear;
+    box-shadow: 0 0 5px #4a4a4a;
+    border: 5px solid #fff;
+    height: 140px;
+    width: 220px; }
+    .item-teaser a:hover .item-teaser-title, .item-teaser a:focus .item-teaser-title {
+      opacity: 1; }
+    .item-teaser a:hover img, .item-teaser a:focus img {
+      margin-top: 5px; }
+  .item-teaser .front,
+  .item-teaser .back {
+    background: #fff;
+    height: 140px;
+    padding-top: 5px;
+    width: 220px; }
+
+.item-teaser-title {
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: #535353;
+  background: -moz-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #535353), color-stop(100%, black));
+  background: -webkit-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
+  background: -o-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
+  background: radial-gradient(ellipse at center, #535353 0%, black 100%);
+  font-size: 1em;
+  height: 130px;
+  left: 5px;
+  opacity: 0;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  vertical-align: middle;
+  width: 210px; }
+
 /*
 Typography
 ---------------*/
@@ -260,7 +293,26 @@ h2 {
 .item-teaser {
   height: 140px;
   width: 220px;
-  /*
+  /*.item-teaser-title {
+  	@include animate(opacity, .3s);
+  	background:#535353;
+  	background:-moz-radial-gradient(center, ellipse cover,  #535353 0%, #000000 100%);
+  	background:-webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#535353), color-stop(100%,#000000));
+  	background:-webkit-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+  	background:-o-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+  	background:-ms-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+  	background:radial-gradient(ellipse at center,  #535353 0%,#000000 100%);
+  	font-size:1em;
+  	height:120px;
+  	left:0;
+  	opacity:0;
+  	padding:10px;
+  	position:absolute;
+  	top:0;
+  	vertical-align:middle;
+  	width:200px;
+  }
+  
   &.js-on {
   	h2 {
   		background:#535353;
@@ -287,27 +339,6 @@ h2 {
       border: 0; }
       .item-teaser a:hover .item-teaser-title, .item-teaser a:focus .item-teaser-title {
         opacity: 1; }
-  .item-teaser .item-teaser-title {
-    -moz-transition: opacity 0.3s linear;
-    -o-transition: opacity 0.3s linear;
-    -webkit-transition: opacity 0.3s linear;
-    transition: opacity 0.3s linear;
-    background: #535353;
-    background: -moz-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #535353), color-stop(100%, black));
-    background: -webkit-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
-    background: -o-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
-    background: -ms-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
-    background: radial-gradient(ellipse at center, #535353 0%, black 100%);
-    font-size: 1em;
-    height: 120px;
-    left: 0;
-    opacity: 0;
-    padding: 10px;
-    position: absolute;
-    top: 0;
-    vertical-align: middle;
-    width: 200px; }
 
 .item-content p:first-of-type {
   /*font-weight:bold;*/ }
@@ -637,4 +668,11 @@ Media queries
     width: 100%; }
 
   .about li {
-    display: block; } }
+    display: block; }
+
+  /* Item teaser */
+  .item-teaser,
+  .item-teaser a,
+  .item-teaser img {
+    height: auto;
+    width: 100%; } }
