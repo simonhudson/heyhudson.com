@@ -30,6 +30,7 @@ Reset
   src: url('../fonts/roboto-slab/RobotoSlab-Bold.ttf');
 }
 *, fieldset {
+  box-sizing:border-box;
   margin: 0;
   padding: 0; }
 

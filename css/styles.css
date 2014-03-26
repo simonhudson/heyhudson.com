@@ -30,6 +30,7 @@ Reset
   src: url("../fonts/roboto-slab/RobotoSlab-Bold.ttf"); }
 
 *, fieldset {
+  box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
@@ -188,8 +189,8 @@ header {
   -o-transition: box-shadow 0.3s linear;
   -webkit-transition: box-shadow 0.3s linear;
   transition: box-shadow 0.3s linear;
-  box-shadow: 0 0 5px transparent;
-  border: 5px solid #eee;
+  box-shadow: 0 0 5px #4a4a4a;
+  border: 5px solid #fff;
   cursor: pointer;
   margin-bottom: 20px;
   position: relative; }
@@ -197,6 +198,8 @@ header {
     box-shadow: 0 0 5px #4a4a4a; }
 
 .item-grab {
+  box-shadow: 0 0 5px #4a4a4a;
+  border: 5px solid #fff;
   margin-bottom: 60px; }
   .item-grab img {
     display: block;

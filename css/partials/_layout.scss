@@ -60,8 +60,8 @@ header {
 }
 .item-teaser {
 	@include animate(box-shadow, .3s);
-	@include boxShadow(0, 0, 5px, transparent);
-	border:5px solid #eee;
+	@include boxShadow(0, 0, 5px, $bodyTextColor);
+	border:5px solid #fff;
 	cursor:pointer;
 	margin-bottom:20px;
 	position:relative;
@@ -71,6 +71,8 @@ header {
 	}
 }
 .item-grab {
+	@include boxShadow(0, 0, 5px, $bodyTextColor);
+	border:5px solid #fff;
 	margin-bottom:60px;
 	img {
 		display:block;
