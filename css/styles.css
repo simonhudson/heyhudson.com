@@ -252,11 +252,16 @@ footer {
     background: -o-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
     background: -ms-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
     background: radial-gradient(ellipse at center, #535353 0%, black 100%);
+    display: table;
     font-size: .6em;
     left: 0;
     opacity: 0;
+    padding: 10px;
     position: absolute;
     top: 0; }
+    .item-teaser .item-teaser-title span {
+      display: table-cell;
+      vertical-align: middle; }
   .item-teaser a {
     color: #fff;
     position: relative; }

@@ -5,7 +5,7 @@
 		<h2>
 			<a href="<?php echo $siteRoot.'portfolio/'.$portfolioItem['niceurl']; ?>">
 				<img src="<?php echo $sitePath['imgs']; ?>grab-small-<?php echo $portfolioItem['niceurl']; ?>.png" alt="<?php echo $portfolioItem['title']; ?> screen grab" />
-				<span class="item-teaser-title"><?php echo $portfolioItem['title']; ?></span>
+				<span class="item-teaser-title"><span><?php echo $portfolioItem['title']; ?></span></span>
 			</a>
 		</h2>
 	</div><!--/item-teaser-->
