@@ -11,18 +11,6 @@ a {
 		border-bottom:1px solid $accentPrimary100;
 	}
 }
-.item-teaser.js-on h2 a {
-	color:#fff;
-	display:table-cell;
-	font-weight:normal;
-	padding:15px;
-	text-align:center;
-	text-decoration:none;
-	vertical-align:middle;
-	&:focus {
-		text-decoration:underline;
-	}
-}
 .item-meta a {
 	font-weight:bold;
 }

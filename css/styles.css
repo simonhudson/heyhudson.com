@@ -35,6 +35,9 @@ Reset
   padding: 0; }
 
 html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%; }
 
 body {
@@ -208,8 +211,7 @@ footer {
   clear: both; }
 
 .band {
-  box-shadow: 0 0 5px #4a4a4a;
-  background: #eee;
+  background: #f6f6f6;
   float: left;
   padding: 40px 0;
   width: 100%; }
@@ -225,50 +227,61 @@ footer {
 
 /* Item teaser UI */
 .item-teaser {
+  box-shadow: 0 0 5px #dddddd;
+  border: 5px solid #fff;
+  height: 140px;
   margin-bottom: 20px;
-  position: relative; }
+  position: relative;
+  width: 220px; }
+  .item-teaser h2,
+  .item-teaser a,
+  .item-teaser .item-teaser-title {
+    height: 130px;
+    width: 210px; }
+  .item-teaser h2 {
+    padding-bottom: 0; }
+  .item-teaser .item-teaser-title {
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+    background: #535353;
+    background: -moz-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #535353), color-stop(100%, black));
+    background: -webkit-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
+    background: -o-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
+    background: radial-gradient(ellipse at center, #535353 0%, black 100%);
+    font-size: .6em;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0; }
   .item-teaser a {
-    -moz-transition: box-shadow 0.3s linear;
-    -o-transition: box-shadow 0.3s linear;
-    -webkit-transition: box-shadow 0.3s linear;
-    transition: box-shadow 0.3s linear;
-    box-shadow: 0 0 5px #4a4a4a;
-    border: 5px solid #fff;
-    height: 140px;
-    width: 220px; }
+    color: #fff;
+    position: relative; }
     .item-teaser a:hover .item-teaser-title, .item-teaser a:focus .item-teaser-title {
       opacity: 1; }
-    .item-teaser a:hover img, .item-teaser a:focus img {
-      margin-top: 5px; }
-  .item-teaser .front,
-  .item-teaser .back {
-    background: #fff;
-    height: 140px;
-    padding-top: 5px;
-    width: 220px; }
 
-.item-teaser-title {
-  -moz-transition: opacity 0.3s linear;
-  -o-transition: opacity 0.3s linear;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  background: #535353;
-  background: -moz-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #535353), color-stop(100%, black));
-  background: -webkit-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
-  background: -o-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #535353 0%, black 100%);
-  background: radial-gradient(ellipse at center, #535353 0%, black 100%);
-  font-size: 1em;
-  height: 130px;
-  left: 5px;
-  opacity: 0;
-  padding: 10px;
-  position: absolute;
-  top: 5px;
-  vertical-align: middle;
-  width: 210px; }
-
+/*
+	@include animate(opacity, .3s);
+	background:#535353;
+	background:-moz-radial-gradient(center, ellipse cover,  #535353 0%, #000000 100%);
+	background:-webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#535353), color-stop(100%,#000000));
+	background:-webkit-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+	background:-o-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+	background:-ms-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+	background:radial-gradient(ellipse at center,  #535353 0%,#000000 100%);
+	font-size:1em;
+	height:($itemTeaserHeight - ($itemTeaserBorderWidth * 2));
+	left:$itemTeaserBorderWidth;
+	opacity:0;
+	padding:10px;
+	position:absolute;
+	top:$itemTeaserBorderWidth;
+	vertical-align:middle;
+	width:($itemTeaserWidth - ($itemTeaserBorderWidth * 2));
+*/
 /*
 Typography
 ---------------*/
@@ -383,17 +396,6 @@ a {
   text-decoration: none; }
   a:hover, a:focus {
     border-bottom: 1px solid #ff9000; }
-
-.item-teaser.js-on h2 a {
-  color: #fff;
-  display: table-cell;
-  font-weight: normal;
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle; }
-  .item-teaser.js-on h2 a:focus {
-    text-decoration: underline; }
 
 .item-meta a {
   font-weight: bold; }
@@ -668,11 +670,4 @@ Media queries
     width: 100%; }
 
   .about li {
-    display: block; }
-
-  /* Item teaser */
-  .item-teaser,
-  .item-teaser a,
-  .item-teaser img {
-    height: auto;
-    width: 100%; } }
+    display: block; } }

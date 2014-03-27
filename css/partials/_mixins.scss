@@ -38,3 +38,9 @@
   background-repeat:no-repeat;
   display:inline-block;
 }
+@mixin vertGradient($colorTop, $colorBottom) {
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$colorTop}', endColorstr='#{$colorBottom}');
+  background:-webkit-gradient(linear, left top, left bottom, from(#{$colorTop}), to(#{$colorBottom}));
+  background:-moz-linear-gradient(top, #{$colorTop}, #{$colorBottom});
+  background:#{$colorTop};
+}

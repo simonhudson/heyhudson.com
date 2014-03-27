@@ -88,8 +88,7 @@ footer {
 	clear:both;
 }
 .band {
-	@include boxShadow(0, 0, 5px, $bodyTextColor);
-	background:#eee;
+	background:#f6f6f6;
 	float:left;
 	padding:40px 0;
 	width:100%;
@@ -108,33 +107,49 @@ footer {
 
 /* Item teaser UI */
 .item-teaser {
+	@include boxShadow(0, 0, 5px, #ddd);
+	border:5px solid #fff;
+	height:$itemTeaserHeight;
 	margin-bottom:20px;
 	position:relative;
+	width:$itemTeaserWidth;
+	h2,
+	a,
+	.item-teaser-title {
+		height:($itemTeaserHeight - ($itemTeaserBorderWidth * 2));
+		width:($itemTeaserWidth - ($itemTeaserBorderWidth * 2));
+	}
+	h2 {
+		padding-bottom:0;
+	}
+	.item-teaser-title {
+		@include animate(opacity, .3s);
+		background:#535353;
+		background:-moz-radial-gradient(center, ellipse cover,  #535353 0%, #000000 100%);
+		background:-webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#535353), color-stop(100%,#000000));
+		background:-webkit-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+		background:-o-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+		background:-ms-radial-gradient(center, ellipse cover,  #535353 0%,#000000 100%);
+		background:radial-gradient(ellipse at center,  #535353 0%,#000000 100%);
+		font-size:.6em;		
+		left:0;
+		opacity:0;
+		position:absolute;
+		top:0;
+	}
 	a {
-		@include animate(box-shadow, .3s);
-		@include boxShadow(0, 0, 5px, $bodyTextColor);
-		border:5px solid #fff;
-		height:$itemTeaserHeight;
-		width:$itemTeaserWidth;
+		color:#fff;
+		position:relative;
 		&:hover,
 		&:focus {
 			.item-teaser-title {
 				opacity:1;
 			}
-			img {
-				margin-top:$itemTeaserBorderWidth;
-			}
 		}
 	}
-	.front,
-	.back {
-		background:#fff;
-		height:$itemTeaserHeight;
-		padding-top:5px;
-		width:$itemTeaserWidth;
-	}
 }
-.item-teaser-title {
+
+/*
 	@include animate(opacity, .3s);
 	background:#535353;
 	background:-moz-radial-gradient(center, ellipse cover,  #535353 0%, #000000 100%);
@@ -152,4 +167,4 @@ footer {
 	top:$itemTeaserBorderWidth;
 	vertical-align:middle;
 	width:($itemTeaserWidth - ($itemTeaserBorderWidth * 2));
-}
+*/
