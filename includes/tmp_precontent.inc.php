@@ -41,10 +41,16 @@ function formatBytes($size) {
 	<div class="col span-9">
 		<header class="header" role="banner">
 			<div class="logo">
+				<?php if ($currentPage === $sitePath['root']) { ?>
+				<h1>
+				<?php } ?>
 				<a href="<?php echo $sitePath['root']; ?>">
 					<span class="roundel"></span>
 					<span class="name">Simon Hudson</span> <span class="divider">/</span> <span class="tagline">web design &amp; development</span>
 				</a>
+				<?php if ($currentPage === $sitePath['root']) { ?>
+				</h1>
+				<?php } ?>
 			</div><!--/logo-->
 		</header><!--/header-->
 	</div>

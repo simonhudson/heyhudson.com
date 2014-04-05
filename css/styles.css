@@ -42,7 +42,7 @@ html {
 
 body {
   background: #fff;
-  color: #4a4a4a;
+  color: #2f2a24;
   font-family: 'LibreBaskervilleRegular', georgia, serif;
   font-size: 1.8em; }
 
@@ -59,7 +59,7 @@ pre {
   font-family: "Courier New", Courier, monospace; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #4a4a4a;
+  border-bottom: 1px dotted #2f2a24;
   cursor: help;
   font-family: inherit; }
 
@@ -84,7 +84,7 @@ abbr, acronym {
   text-decoration: none; }
 
 #access-links li a:active, #access-links li a:focus {
-  background: #4a4a4a;
+  background: #2f2a24;
   color: #fff;
   height: auto;
   left: 0;
@@ -131,15 +131,18 @@ footer {
 Layout
 ---------------*/
 header {
-  border-bottom: 1px solid #4a4a4a;
-  font-family: arial, sans-serif;
-  font-size: .8em;
+  border-bottom: 1px solid #2f2a24;
   margin-bottom: 2px;
   padding: 40px 0 20px 0;
-  position: relative;
-  text-transform: lowercase; }
+  position: relative; }
+  header h1, header span {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    text-transform: lowercase; }
+  header h1 span {
+    margin-right: 1px; }
   header:before {
-    border-bottom: 2px solid #4a4a4a;
+    border-bottom: 2px solid #2f2a24;
     bottom: -5px;
     content: '';
     left: 0;
@@ -158,19 +161,22 @@ header {
     background-position: 0 0;
     background-repeat: no-repeat;
     display: inline-block;
-    background-color: #4a4a4a;
+    background-color: #2f2a24;
     height: 60px;
     width: 60px; }
+  header .tagline {
+    opacity: .7; }
   header a {
     border-bottom: 0;
-    color: #4a4a4a;
+    color: #2f2a24;
+    display: inline-block;
     font-weight: normal; }
   header a:hover,
   header a:focus {
     border-bottom: 0; }
     header a:hover .roundel,
     header a:focus .roundel {
-      background-color: #ff9000; }
+      background-color: #df4931; }
   header .name,
   header .tagline,
   header .divider {
@@ -180,7 +186,7 @@ header {
   header .divider {
     font-weight: bold; }
   header .divider {
-    color: #ff9000; }
+    color: #df4931; }
 
 .main-content {
   float: left;
@@ -188,7 +194,7 @@ header {
   position: relative; }
 
 .item-grab {
-  box-shadow: 0 0 5px #4a4a4a;
+  box-shadow: 0 0 5px #2f2a24;
   border: 5px solid #fff;
   margin-bottom: 60px; }
   .item-grab img {
@@ -218,7 +224,7 @@ footer {
 
 .self-pic {
   border-radius: 75px 75px 75px 75px;
-  box-shadow: 0 0 5px #4a4a4a;
+  box-shadow: 0 0 5px #2f2a24;
   float: left;
   margin-right: 1em; }
 
@@ -397,10 +403,10 @@ a {
   -webkit-transition: border-bottom 0.3s linear;
   transition: border-bottom 0.3s linear;
   border-bottom: 1px solid transparent;
-  color: #ff9000;
+  color: #df4931;
   text-decoration: none; }
   a:hover, a:focus {
-    border-bottom: 1px solid #ff9000; }
+    border-bottom: 1px solid #df4931; }
 
 .item-meta a {
   font-weight: bold; }
@@ -415,7 +421,7 @@ a {
     .social-links li:last-of-type {
       margin-right: 0; }
   .social-links a {
-    color: #4a4a4a;
+    color: #2f2a24;
     font-weight: normal;
     text-transform: uppercase; }
   .social-links span {
@@ -434,7 +440,7 @@ a {
     background-position: 0 0;
     background-repeat: no-repeat;
     display: inline-block;
-    background-color: #4a4a4a;
+    background-color: #2f2a24;
     height: 40px;
     margin-right: 10px;
     width: 40px; }
@@ -449,10 +455,10 @@ a {
     -webkit-transition: color 0.3s linear;
     transition: color 0.3s linear;
     border-bottom: 0;
-    color: #ff9000; }
+    color: #df4931; }
     .social-links a:hover .icon,
     .social-links a:focus .icon {
-      background-color: #ff9000; }
+      background-color: #df4931; }
 
 /*
 Tooltip

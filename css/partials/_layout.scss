@@ -8,12 +8,19 @@ $itemTeaserWidth: 220px;
 
 header {
 	border-bottom:1px solid $bodyTextColor;
-	font-family:arial, sans-serif;
-	font-size:.8em;
 	margin-bottom:2px;
 	padding:40px 0 20px 0;
 	position:relative;
-	text-transform:lowercase;
+	h1, span {
+		font-family:arial, sans-serif;
+		font-size:14px;
+		text-transform:lowercase;
+	}
+	h1 {
+		span {
+			margin-right:1px;
+		}
+	}
 	&:before {
 		border-bottom:2px solid $bodyTextColor;
 		bottom:-5px;
@@ -32,9 +39,13 @@ header {
 		height:60px;
 		width:60px;
 	}
+	.tagline {
+		opacity:.7;
+	}
 	a {
 		border-bottom:0;
 		color:$bodyTextColor;
+		display:inline-block;
 		font-weight:normal;
 	}
 	a:hover,
