@@ -124,11 +124,13 @@ footer {
 	margin-bottom:20px;
 	position:relative;
 	width:$itemTeaserWidth;
+	img {
+		width:210px;
+	}
 	h2,
 	a,
 	.item-teaser-title {
-		height:($itemTeaserHeight - ($itemTeaserBorderWidth * 2));
-		width:($itemTeaserWidth - ($itemTeaserBorderWidth * 2));
+		height:($itemTeaserHeight - 20);
 	}
 	h2 {
 		padding-bottom:0;
